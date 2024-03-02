@@ -4,6 +4,7 @@
   --primary-color: #ff5400;
   --primary-text: #131318;
   --text-color: #5a5a5d;
+  --footer-bg-color: #f3f3f3;
 }
 
 *,
@@ -16,16 +17,32 @@
   outline: none;
 }
 
+html {
+  font-size: 95%;
+}
+
 body {
   font-family: 'Mulish', sans-serif;
   color: var(--text-color);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+img {
+  max-width: 100%;
+}
+hr {
+  height: 1px;
+  background-color: #e7e7e8;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-weight: 900;
+  font-weight: 800;
   color: var(--primary-text);
 }
 .wrapper {
@@ -34,6 +51,27 @@ h4 {
 }
 .highlight-text {
   color: var(--primary-color);
+}
+.btn {
+  background-color: var(--primary-color);
+  font-weight: 900;
+  color: #ffffff;
+  font-size: 1.2rem;
+  padding: 1rem 2.4rem;
+  border-radius: 0.5rem;
+}
+
+.section-header {
+  text-align: center;
+  padding-inline: 5px;
+  margin-bottom: 1.5rem;
+}
+.section-title {
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+}
+.section-text {
+  line-height: 1.7;
 }
 
 /* header section */
@@ -63,6 +101,21 @@ h4 {
   font-size: 20px;
   font-weight: 900;
   color: var(--primary-text);
+}
+.nav-menu {
+  display: none;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+.nav-link {
+  text-decoration: none;
+  color: var(--primary-text);
+  font-size: 1.05rem;
+}
+.nav-link.active {
+  font-weight: 600;
+  color: var(--primary-color);
 }
 .mobile-menu {
   height: 24px;
@@ -165,4 +218,267 @@ h4 {
 }
 .search-icon {
   width: 1rem;
+}
+
+/* popular tour */
+.popular-tour-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.popular-tour-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+}
+.popular-tour-title {
+  font-size: 1.4rem;
+}
+.popular-tour-text {
+  line-height: 1.6;
+}
+.popular-tour-list {
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  line-height: 1.6rem;
+}
+.popular-tour-btn {
+  margin-top: 1rem;
+}
+.popular-tour-img {
+  display: block;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+/* destination */
+.destination-item {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.destination-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.destination-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.destination-name {
+  position: absolute;
+  font-size: 1.35rem;
+  font-weight: 700;
+  z-index: 10;
+  color: #ffffff;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+.destination-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+/* choose us */
+.choose-us-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.choose-us-outer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.choose-us-card {
+  padding: 2rem 2.2rem;
+  border: 1px solid;
+  border-radius: 1rem;
+}
+.choose-us-card-img {
+  height: 48px;
+  margin-bottom: 1.2rem;
+}
+.choose-us-card-title {
+  font-size: 1.3rem;
+  margin-bottom: 1.3rem;
+}
+.choose-us-card-text {
+  line-height: 1.7;
+}
+.hotel-card {
+  border-color: #feedd9;
+  background-color: #fffbf7;
+}
+.map-card {
+  border-color: #cbf4fd;
+  background-color: #f4fdff;
+}
+.discount-card {
+  border-color: #fad2d2;
+  background-color: #fef6f6;
+}
+
+/* blog */
+.blog-card {
+  border: 1px solid var(--primary-color);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.blog-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.blog-img {
+  aspect-ratio: 16 / 9;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+.blog-content {
+  padding: 1.2rem;
+  padding-top: 1rem;
+}
+.blog-meta-block {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  list-style: none;
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+}
+.blog-meta {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.blog-meta-icon {
+  width: 1rem;
+}
+.blog-title {
+  font-size: 1.1rem;
+}
+
+/* newsletter */
+.newsletter-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.4rem;
+  border: solid 1px var(--primary-color);
+  border-radius: 1rem;
+  background: #ffffff;
+}
+.newsletter-title {
+  font-size: 1.4rem;
+}
+.newsletter-text {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.newsletter-input {
+  background-color: #f3f3f3;
+  padding: 1rem 1.2rem;
+  border-radius: 0.5rem;
+}
+.newsletter-input::placeholder {
+  color: #b0b0b1;
+}
+.newsletter-form-btn {
+  background-color: var(--primary-color);
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  padding: 1rem 2.5rem;
+}
+.newsletter-img-block {
+  position: relative;
+  aspect-ratio: 6/5;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.newsletter-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.newsletter-content {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: var(--primary-color);
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  translate: 1.1rem 0;
+  rotate: -30deg;
+  transform-origin: bottom left;
+}
+.offer-sub-text {
+  color: #ffffff;
+  font-size: 1rem;
+}
+.offer-main-text {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+/* footer */
+.footer {
+  background: var(--footer-bg-color);
+  margin-top: 1.5rem;
+  padding-block: 2rem;
+  text-align: center;
+}
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--primary-text);
+  margin-bottom: 1.2rem;
+}
+.footer-logo-img {
+  height: 28px;
+}
+.footer-text {
+  line-height: 1.7;
+  font-size: 1rem;
+  padding-inline: 1rem;
+  margin-bottom: 1.2rem;
+}
+.footer-social-media {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+.footer-social-icon {
+  width: 24px;
+}
+.footer-copyright {
+  margin-top: 1.2rem;
 }
